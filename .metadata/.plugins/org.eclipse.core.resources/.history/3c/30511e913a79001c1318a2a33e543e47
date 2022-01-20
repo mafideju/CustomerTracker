@@ -1,0 +1,44 @@
+package com.mafideju.jdbc;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/jdbctest")
+public class jdbctest extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String user = "hbstudent";
+		String pass = "hbstudent";
+		String URL = "jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false&serverTimezone=UTC";
+		String driver = "com.mysql.jdbc.Driver";
+		
+		try {
+			
+			PrintWriter out = response.getWriter();
+			out.println("Conectando ao MySQL: " + URL);
+			Class.forName(driver);
+			
+			Connection connection = DriverManager.getConnection(URL, user, pass);
+			out.println("Conexão bem sucedida!");
+			connection.close();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new ServletException(e);
+		}
+		
+		
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+}
