@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
-    <entry loc="/usr" stamp="1592463717000"/>
-    <entry loc="/home/marciomafidejurodrigues" stamp="1642602548374"/>
     <entry loc="/home/marciomafidejurodrigues/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_16.0.2.v20210721-1149" stamp="1630606577971"/>
     <entry loc="/usr/java/jre1.8.0_261-amd64" stamp="1598657157503"/>
-    <entry loc="/" stamp="1637700446485"/>
 </dirs>
