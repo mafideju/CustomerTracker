@@ -30,15 +30,21 @@ tr:nth-child(even) {background: #FFFFFF;}
 tr:nth-child(odd) {background: #BBBBBB;}	
  
 .add-button {
+	background: #09c332;
 	border: 1px solid #666; 
-	border-radius: 5px; 
-	padding: 4px; 
-	font-size: 12px;
+	border-radius: 5px;
+	color: white; 
+	font-size: 15px;
 	font-weight: bold;
+	padding: 5px 10px;  
 	width: 120px; 
-	padding: 5px 10px; 
-	margin-bottom: 15px;
-	background: #cccccc;
+}
+
+.search-bar {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+	padding: 0 15px;
 }
  
 #wrapper {

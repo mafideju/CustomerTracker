@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.mafideju.springdemo.dao.CustomerDAO;
 import com.mafideju.springdemo.entity.Customer;
+import com.mafideju.springdemo.utils.SortUtils;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
@@ -17,9 +18,9 @@ public class CustomerServiceImpl implements CustomerService {
 	
 	@Override
 	@Transactional
-	public List<Customer> getCustomers() {
+	public List<Customer> getCustomers(int sortField) {
 		
-		return customerDAO.getCustomers();
+		return customerDAO.getCustomers(sortField);
 	}
 
 	@Override
@@ -43,6 +44,13 @@ public class CustomerServiceImpl implements CustomerService {
 		
 		customerDAO.deleteCustomer(id);
 		
+	}
+
+	@Override
+	@Transactional
+	public List<Customer> searchCustomers(String searchName) {
+		
+		return customerDAO.searchCustomer(searchName);
 	}
 
 }
