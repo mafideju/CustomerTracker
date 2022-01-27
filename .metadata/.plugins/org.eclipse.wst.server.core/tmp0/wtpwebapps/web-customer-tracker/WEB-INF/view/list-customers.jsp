@@ -14,22 +14,34 @@
 				<div id="header">
 					<h2>CRM - Relação de Investidores</h2>
 				</div>
+				<input type="button" value="Novo Cliente" onclick="window.location.href='showAddForm'; return false;" class="add-button" />
 			</div>
 			
 			<div id="container">
 				<div id="content">
+				
+				
+				
 					<table>
 						<tr>
 							<th>Nome</th>
 							<th>Sobrenome</th>
 							<th>Email</th>
+							<th>...</th>
 						</tr>
 						
 						<c:forEach var="customer" items="${customers}">
+							<c:url var="updateLink" value="/customer/showUpdateForm">
+								<c:param name="customerId" value="${customer.id}" />
+							</c:url>
+							<c:url var="deleteLink" value="/customer/delete">
+								<c:param name="customerId" value="${customer.id}" />
+							</c:url>
 							<tr>
 								<td>${customer.firstName}</td>
 								<td>${customer.lastName}</td>
 								<td>${customer.email}</td>
+								<td><a href="${updateLink}">Atualizar</a> | <a href="${deleteLink}" onclick="if(!(confirm('Quer deletar mesmo esse cliente?')))return false;">Delete</a></td>
 							</tr>
 						</c:forEach>
 						

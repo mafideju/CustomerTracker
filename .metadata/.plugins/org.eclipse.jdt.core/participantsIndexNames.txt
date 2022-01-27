@@ -1,3 +1,7 @@
 INDEX VERSION 1.131
+/home/marciomafidejurodrigues/Projects/Java/web-customer-tracker/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/39016037.index
+/web-customer-tracker/src
+/home/marciomafidejurodrigues/Projects/Java/web-customer-tracker/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/706933941.index
+/web-customer-tracker/src
 /home/marciomafidejurodrigues/Projects/Java/web-customer-tracker/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3750454120.index
 /web-customer-tracker/src

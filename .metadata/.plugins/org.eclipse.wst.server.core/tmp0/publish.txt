@@ -1,4 +1,4 @@
 #Tomcat publish data
-#Fri Jan 21 18:46:23 BRT 2022
+#Thu Jan 27 12:25:26 BRT 2022
 org.eclipse.jst.jee.server\:/binary\:/home/marciomafidejurodrigues/Projects/Java/web-customer-tracker/web-customer-tracker/WebContent/WEB-INF/lib/spring-web-5.3.9.jar=WEB-INF/lib/spring-web-5.3.9.jar
 org.eclipse.jst.jee.server\:/binary\:/home/marciomafidejurodrigues/Projects/Java/web-customer-tracker/web-customer-tracker/WebContent/WEB-INF/lib/spring-web-5.3.9-sources.jar=WEB-INF/lib/spring-web-5.3.9-sources.jar
