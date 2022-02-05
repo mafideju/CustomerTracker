@@ -1,5 +1,0 @@
-package com.mafideju.springdemo.dao;
-
-public interface CustomerDAO {
-
-}

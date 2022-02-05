@@ -1,8 +1,0 @@
-package com.mafideju.springdemo.aspect;
-
-import org.aspectj.lang.annotation.Aspect;
-
-@Aspect
-public class LogginAspect {
-
-}
