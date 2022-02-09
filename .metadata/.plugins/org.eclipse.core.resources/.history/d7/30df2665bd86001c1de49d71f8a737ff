@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="data" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Acesse sua conta</title>
+	</head>
+<body>
+
+	<main class="wrapper fadeInDown">
+		<section id="formContent">
+			<div>
+				<h2>Acesse sua conta</h2>
+			</div>
+		    <div class="fadeIn first">
+		    	<img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+		    </div>
+			<article>
+				<data:if test="${param.error != null}">
+					<div>
+						<p>Sinto, credenciais inválidas.</p>
+					</div>	
+				</data:if>
+			</article>
+			
+			<div>
+				<form:form action="${pageContext.request.contextPath}/authenticateTheUser" method="POST">
+			        <input type="text" id="login" class="fadeIn second" name="username" placeholder="login">
+			        <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+			        <input type="submit" class="fadeIn fourth" value="Log In">
+					
+				</form:form>
+			</div>
+		</section>
+	</main>
+
+</body>
+</html>

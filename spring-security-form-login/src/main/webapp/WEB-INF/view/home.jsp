@@ -1,15 +1,52 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="data" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>Maven, Mafideju and Spring!</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
 	<main>
-		<div style="font-family: cursive;">
+		<div>
 			<h2>Maven, Mafideju and Spring!</h2>
+		</div>
+		
+		<div>
+			<label>Usuário: </label>
+			<security:authentication property="principal.username"/>
+		</div>
+		<div>
+			<label>Função: </label>
+			<security:authentication property="principal.authorities"/>
+		</div>
+		<div>
+			<label>Teste: </label>
+			<security:authentication property="principal"/>
+		</div>
+		
+		<security:authorize access="hasRole('MANAGER')">
+			<div>
+				<a href="${pageContext.request.contextPath}/leaders">Reunião de Lideranças</a>
+				<p>Apenas Gerências</p>
+			</div>
+		</security:authorize>
+
+		<security:authorize access="hasRole('ADMIN')">
+			<div>
+				<a href="${pageContext.request.contextPath}/systems">Reunião de TI</a>
+				<p>Apenas TI Sys Admins</p>
+			</div>
+		</security:authorize>		
+		
+		<div>
+			<form:form action="${pageContext.request.contextPath}/logout" method="POST">
+		        <input type="submit" class="fadeIn fourth" value="Sair">					
+			</form:form>
 		</div>
 	</main>
 </body>

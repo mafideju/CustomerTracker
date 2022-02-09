@@ -1,0 +1,4 @@
+127.0.0.1 - - [06/Feb/2022:18:22:42 -0300] "GET /spring-security-form-login/showMyLoginPage HTTP/1.1" 200 7592
+127.0.0.1 - - [06/Feb/2022:18:22:43 -0300] "GET /favicon.ico HTTP/1.1" 404 762
+127.0.0.1 - - [06/Feb/2022:18:23:06 -0300] "POST /spring-security-form-login/authenticateTheUser HTTP/1.1" 302 -
+127.0.0.1 - - [06/Feb/2022:18:23:06 -0300] "GET /spring-security-form-login/showMyLoginPage?error HTTP/1.1" 200 7665

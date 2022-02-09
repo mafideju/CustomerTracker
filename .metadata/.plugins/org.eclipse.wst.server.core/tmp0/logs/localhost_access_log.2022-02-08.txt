@@ -1,0 +1,15 @@
+127.0.0.1 - - [08/Feb/2022:12:49:16 -0300] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [08/Feb/2022:12:49:16 -0300] "GET /spring-security-form-login/ HTTP/1.1" 302 -
+127.0.0.1 - - [08/Feb/2022:12:49:17 -0300] "GET /spring-security-form-login/showMyLoginPage HTTP/1.1" 200 7592
+127.0.0.1 - - [08/Feb/2022:12:49:25 -0300] "GET /spring-security-form-login/showMyLoginPage HTTP/1.1" 200 7592
+127.0.0.1 - - [08/Feb/2022:12:49:32 -0300] "POST /spring-security-form-login/authenticateTheUser HTTP/1.1" 302 -
+127.0.0.1 - - [08/Feb/2022:12:49:32 -0300] "GET /spring-security-form-login/ HTTP/1.1" 200 415
+127.0.0.1 - - [08/Feb/2022:19:02:14 -0300] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [08/Feb/2022:19:02:25 -0300] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [08/Feb/2022:19:02:25 -0300] "GET /favicon.ico HTTP/1.1" 404 762
+127.0.0.1 - - [08/Feb/2022:19:02:26 -0300] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [08/Feb/2022:19:02:27 -0300] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [08/Feb/2022:19:02:41 -0300] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [08/Feb/2022:19:02:58 -0300] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [08/Feb/2022:19:02:59 -0300] "GET /spring-security-form-login/ HTTP/1.1" 302 -
+127.0.0.1 - - [08/Feb/2022:19:03:01 -0300] "GET /spring-security-form-login/showMyLoginPage HTTP/1.1" 200 7816
