@@ -1,7 +1,0 @@
-package com.mafideju.springsecurity.config;
-
-import org.springframework.security.web.access.expression.WebSecurityExpressionRoot;
-
-public class SecurityConfig extends WebSecurityExpressionRoot {
-
-}

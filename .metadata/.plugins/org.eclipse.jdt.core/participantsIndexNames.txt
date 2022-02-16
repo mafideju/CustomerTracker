@@ -1,3 +1,0 @@
-INDEX VERSION 1.131
-/home/marciomafideju/Projects/Java/FormLogin/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2075808671.index
-/spring-security-form-login/src/main/java

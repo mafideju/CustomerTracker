@@ -1,5 +1,0 @@
-package com.mafideju.springsecurity.controller;
-
-public class LoginController {
-
-}
