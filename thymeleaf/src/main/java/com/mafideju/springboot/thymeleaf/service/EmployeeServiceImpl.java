@@ -1,4 +1,4 @@
-package com.luv2code.springboot.thymeleafdemo.service;
+package com.mafideju.springboot.thymeleaf.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.luv2code.springboot.thymeleafdemo.dao.EmployeeRepository;
-import com.luv2code.springboot.thymeleafdemo.entity.Employee;
+import com.mafideju.springboot.thymeleaf.dao.EmployeeRepository;
+import com.mafideju.springboot.thymeleaf.entity.Employee;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
@@ -21,7 +21,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	
 	@Override
 	public List<Employee> findAll() {
-		return employeeRepository.findAll();
+		return employeeRepository.findAllByOrderByAgeAsc();
 	}
 
 	@Override
@@ -34,8 +34,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 			theEmployee = result.get();
 		}
 		else {
-			// we didn't find the employee
-			throw new RuntimeException("Did not find employee id - " + theId);
+			throw new RuntimeException("Empregado com ID - " + theId + " - Não foi encontrado");
 		}
 		
 		return theEmployee;
@@ -52,9 +51,3 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 }
-
-
-
-
-
-

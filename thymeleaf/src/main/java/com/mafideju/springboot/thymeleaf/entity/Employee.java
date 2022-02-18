@@ -1,4 +1,4 @@
-package com.luv2code.springboot.thymeleafdemo.entity;
+package com.mafideju.springboot.thymeleaf.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,8 +11,6 @@ import javax.persistence.Table;
 @Table(name="employee")
 public class Employee {
 
-	// define fields
-	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
@@ -27,28 +25,34 @@ public class Employee {
 	@Column(name="email")
 	private String email;
 	
-		
-	// define constructors
+	@Column(name="age")
+	private int age;
 	
+	@Column(name="occupation")
+	private String occupation;
+	
+		
 	public Employee() {
 		
 	}
 	
-	public Employee(int id, String firstName, String lastName, String email) {
+	public Employee(int id, String firstName, String lastName, String email, int age, String occupation) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
+		this.age = age;
+		this.occupation = occupation;
 	}
 
 
-	public Employee(String firstName, String lastName, String email) {
+	public Employee(String firstName, String lastName, String email, int age, String occupation) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
+		this.age = age;
+		this.occupation = occupation;
 	}
-
-	// define getter/setter
 	
 	public int getId() {
 		return id;
@@ -82,7 +86,21 @@ public class Employee {
 		this.email = email;
 	}
 
-	// define tostring
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getOccupation() {
+		return occupation;
+	}
+
+	public void setOccupation(String occupation) {
+		this.occupation = occupation;
+	}
 
 	@Override
 	public String toString() {
